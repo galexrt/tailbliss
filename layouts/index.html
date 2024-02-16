@@ -30,6 +30,7 @@
 
     <!-- More main page content here... -->
 
+    {{ if .Site.Params.P1 }}
     <!-- Our mission section -->
     <div class="relative my-4">
         <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
@@ -73,7 +74,9 @@
             </div>
         </div>
     </div>
+    {{ end }}
 
+    {{ if .Site.Params.P2.enabled }}
     <!-- JITsection -->
     <div class="overflow-hidden sm:pt-6 lg:relative">
         <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8">
@@ -117,8 +120,10 @@
             </div>
         </div>
     </div>
+    {{ end }}
 
 
+    {{ if .Site.Params.P3.enabled }}
     <!-- Sponsors section -->
     <div class="max-w-md px-4 mx-auto md:pt-24 md:pb-16 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
@@ -154,7 +159,9 @@
             </div>
         </div>
     </div>
+    {{ end }}
 
+    {{ if .Site.Params.P4.enabled }}
     <!-- Blog section -->
     <div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12">
         <div class="absolute inset-0">
@@ -232,8 +239,9 @@
             </div>
         </div>
     </div>
+    {{ end }}
 
-    {{ if not .Site.Params.Disable_stay_uptodate}}
+    {{ if not .Site.Params.Disable_stay_uptodate }}
     <!-- CTA section -->
     <div class="relative pb-16 mt-6">
         <div class="max-w-md mx-auto px-7 sm:max-w-3xl lg:max-w-7xl">
