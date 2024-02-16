@@ -116,6 +116,11 @@ params:
     discord:
       enabled: true
       url: 'https://discord.gg/....'
+  
+  footer:
+    url: "https://nusserstudios.com"
+    part1: "Nusser"
+    part2: "Studios."
 
 menu:
   main:
