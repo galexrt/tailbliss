@@ -108,7 +108,9 @@ params:
     twitter:
       enabled: true
       url: '@nusserstudios'
-    
+    discord:
+      enabled: true
+      url: 'https://discord.gg/....'
 
 menu:
   main:
