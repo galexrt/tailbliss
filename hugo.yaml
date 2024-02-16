@@ -46,6 +46,7 @@ markup:
       xhtml: false
 
 params:
+  show_title: true
   author: Nusser Studios
   authorimage: ../assets/images/global/author.webp
   og_image: /images/tailbliss-cover.png
