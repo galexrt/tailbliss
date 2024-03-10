@@ -130,13 +130,15 @@
             <div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                 {{ range .Site.Params.P3.Logos }}
                 <div class="flex justify-center col-span-1 px-4 py-4 bg-gray-50 dark:bg-gray-900/10">
-                    {{ if .image }}
-                    {{ $sponsor := resources.Get .image }}
-                    <img src="{{ $sponsor.RelPermalink }}" class="max-h-28" alt="{{ .alt }}" loading="lazy" />
-                    {{ else }}
-                    {{ $sponsor := resources.Get "images/global/sample-logo.svg" }}
-                    <img src="{{ $sponsor.RelPermalink }}" class="max-h-28" alt="{{ .alt }}" loading="lazy" />
-                    {{ end }}
+                    <a href="{{ .url | default "#" }}">
+                        {{ if .image }}
+                        {{ $sponsor := resources.Get .image }}
+                        <img src="{{ $sponsor.RelPermalink }}" class="max-h-28" alt="{{ .alt }}" loading="lazy" />
+                        {{ else }}
+                        {{ $sponsor := resources.Get "images/global/sample-logo.svg" }}
+                        <img src="{{ $sponsor.RelPermalink }}" class="max-h-28" alt="{{ .alt }}" loading="lazy" />
+                        {{ end }}
+                    </a>
                 </div>
                 {{ end }}
             </div>
